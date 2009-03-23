@@ -43,6 +43,7 @@ class PostsControllerTest < ActionController::TestCase
         get :index, :user_id => users(:first)
       end
       should_respond_with :success
+      should_render_partial :post, 2
       should_assign_to :user, :class => User, :equals => 'users(:first)'
       should_assign_to(:user) { users(:first) }
       should_fail do

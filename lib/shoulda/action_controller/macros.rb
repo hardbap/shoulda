@@ -193,6 +193,17 @@ module Shoulda # :nodoc:
           assert_template template.to_s
         end
       end
+      
+      # Macro that creates a test asserting that the partial was rendered the number of
+      # times as count.
+      # Example:
+      #
+      #   should_render_partial :post, 3
+      def should_render_partial(partial, count = 1)
+        should "render partial #{partial.inspect}" do
+          assert_template :partial => partial.to_s, :count => count  
+        end
+      end
 
       # Macro that creates a test asserting that the controller rendered with the given layout.
       # Example:

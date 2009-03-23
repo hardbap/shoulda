@@ -3,3 +3,9 @@ first:
   title: My Cute Kitten!
   body: This is totally a cute kitten
   user_id: 1
+  
+second:
+  id: 2
+  title: My Other Cute Kitten!
+  body: This one is even cuter
+  user_id: 1  
