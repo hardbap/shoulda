@@ -43,6 +43,7 @@ class PostsControllerTest < Test::Unit::TestCase
         get :index, :user_id => users(:first)
       end
       should_respond_with :success
+      should_render_template :index
       should_assign_to :user, :class => User, :equals => 'users(:first)'
       should_assign_to(:user) { users(:first) }
       should_fail do
